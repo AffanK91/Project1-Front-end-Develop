@@ -1,0 +1,63 @@
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+#map {
+    height: 50%;
+}
+
+/* 
+   * Optional: Makes the sample page fill the window. 
+   */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+header {
+
+    padding: .3%;
+    background-color: #13293d;
+    color: #fff;
+    text-align: center;
+}
+
+/* Change the heading size to 200%, give it a margin all around, and assign font family to serif */
+h1 {
+    margin: 2%;
+    font-size: 120%;
+    font-family: serif;
+    text-align: center;
+}
+
+/* Change header size to 180%, give it a 3% margin on top and bottom, and assign font family to serif */
+h2 {
+    margin: 3% 0;
+    font-size: 180%;
+    font-family: serif;
+}
+
+h3 {
+    margin: 2%;
+    font-size: 100%;
+    font-family: serif;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: .3%;
+    background-color: #13293d;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    
+}
