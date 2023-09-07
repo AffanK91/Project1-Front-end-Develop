@@ -1,4 +1,3 @@
-
 var apiKey = "de0dccced6542249dcb91b68c5f268dc"
 var dropInput = document.querySelector(".queens")
 var dropInput1 = document.querySelector(".brooklyn")
@@ -14,18 +13,23 @@ function userSelect() {
 
     if (selectedCityEl === "1") {
         fetchBrooklyn()
+        initMap(40.6501, -73.9496, 14);
     }
     if (selectedCityEl === "2") {
         fetchBronx()
+         initMap(40.8273, -73.9236, 12);
     }
     if (selectedCityEl === "3") {
         fetchNy()
+        initMap(40.7834, -73.9662, 14);
     }
     if (selectedCityEl === "4") {
         fetchSi()
+        initMap(40.5835, -74.1496, 12);
     }
     if (selectedCityEl === "5") {
         fetchQueens()
+        initMap(40.7498, -73.7976, 14);
     }
 }
 
@@ -254,15 +258,15 @@ function fetchSi(boro5) {
     }).then(function (data) {
         console.log(data)
         renderforcast(data.list)
-        var lat = 40.5835
-        var lon = -74.1496
+        var LatLng = 40.5835
+        var lnglat = -74.1496
         var GoogApiKey = "AIzaSyCJT-FjBOJ8g3SNHdBoxsr1kFGst1yMb-I"
         var map;
         var service;
         var infowindow;
 
         function initMap() {
-            var sydney = new google.maps.LatLng(lat, lon);
+            var sydney = new google.maps.LatLng(LatLng, lonlat);
 
             infowindow = new google.maps.InfoWindow();
 
@@ -375,7 +379,6 @@ window.initMap = initMap;
 
 
 
-
 function renderforcast(list) {
     for (var i = 1; i < list.length; i += 44) {
         var dayDiv = document.createElement("div")
@@ -392,3 +395,17 @@ function renderforcast(list) {
         document.getElementById("forcast").append(dayDiv)
     }
 }
+
+
+let map;
+
+async function initMap(latitude, longitude, zoomlength) {
+  const { Map } = await google.maps.importLibrary("maps");
+
+  map = new Map(document.getElementById("map"), {
+    
+    center: { lat: latitude , lng: longitude },
+    zoom: zoomlength,
+  });
+}
+
