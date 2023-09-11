@@ -14,9 +14,9 @@
 <body>
     <header>
         <h1>
-        Mood for Food  
+            Mood for Food
         </h1>
-        
+
     </header>
 
     <select id="select-form" class="form-select" aria-label="Default select example">
@@ -26,45 +26,45 @@
         <option value="3" class="ny">New York</option>
         <option value="4" class="si">Staten Island</option>
         <option value="5" class="queens">Queens</option>
-        
+
     </select>
     <div>
 
         <button class="search-btn">Search</button>
     </div>
-    
+
     <section id="forcast">
-        
-    </section>
-    <section id="map">
-        
-    </section>
 
+    </section>
+    <div id="map">
 
+    </div>
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<!--
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJT-FjBOJ8g3SNHdBoxsr1kFGst1yMb-I&callback=initMap&libraries=&v=weekly"></script>
+    
+    
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script type="module" src="./index.js"></script>
--->
+    </head>
+
     <div id="map"></div>
+    
+    <script>
+        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+          key: "AIzaSyCJT-FjBOJ8g3SNHdBoxsr1kFGst1yMb-I",
+          v: "weekly",
+          // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+          // Add other bootstrap parameters as needed, using camel case.
+        });
+      </script>
 
-    <!-- prettier-ignore -->
-    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
-            ({ key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly" });</script>
+<script src="./assets/js/script.js"></script>
 
-
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap">
-</script>
-    <script src="./assets/js/script.js"></script>
-</body>
-
-</html>
-
-<footer>
-    <h3>Thanks for visiting!</h4>
-</footer>
+    <footer>
+        <h3>Thanks for visiting!</h4>
+    </footer>
 </body>
 
 </html>
