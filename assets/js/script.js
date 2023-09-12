@@ -310,8 +310,6 @@ function renderforcast(list) {
         var wind = document.createElement("p")
         icon.src = `https://openweathermap.org/img/w/${list[i].weather[0].icon}.png`
         tempEl.textContent = list[i].main.temp
-        HumEl.textContent = list[i].main.humidity
-        wind.textContent = list[i].wind.speed
         dayDiv.append(dateEl, icon, tempEl, HumEl, wind)
         forcastDiv.append(dayDiv)
     }
